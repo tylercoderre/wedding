@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+@import url('https://rsms.me/inter/inter.css');
+@supports (font-variation-settings: normal) {
+}
+
+/* ==== COLORS ==== */
+
+:root {
+	--tc-font-sans: 'Inter var', -apple-system, BlinkMacSystemFont, sans-serif;
+	--tc-font-mono: 'Inconsolata', monospace;
+	--tc-text: #FAFAFA;
+	--tc-text-secondary: #A1A1A1;
+	--tc-text-bold: font-weight: 700;
+	--tc-background: #151515;
+	--tc-background-alpha: rgba(21,21,21,0.95);
+	--tc-background-secondary: #202020;
+	--tc-button: #FAFAFA;
+	--tc-button-text: #151515;
+	--tc-input: #2A2A2A;
+}
+
+* {
+	/* Reset margins and padding */
+	margin: 0;
+	padding: 0;
+}
+
+*:hover {
+	/* Simple ease animation to all hover effects so it's not instant and abrupt */
+	transition: all 0.25s ease-in-out;
+}
+
+section {
+	/* Margins to section out content*/
+	margin: 4rem 0;
+}
+
+address,
+area,
+article,
+aside,
+audio,
+blockquote,
+datalist,
+details,
+dl,
+fieldset,
+figure,
+form,
+input,
+iframe,
+img,
+meter,
+ol,
+optgroup,
+option,
+output,
+p,
+pre,
+progress,
+ruby,
+table,
+textarea,
+ul,
+video {
+	/* Margins for most elements */
+	margin-bottom: 1rem;
+}
+
+/* ==== SCROLLING ==== */
+
+/* Add smooth scroll by default */
+
+html {
+	scroll-behavior: smooth;
+}
+
+/* Disable smooth scroll for those who don't want it */
+
+@media screen and (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
+
+/* Offset to anchor scroll to not cutoff what you scroll to*/
+
+:target:before {
+content:"";
+display: block;
+height: 4rem; /* fixed header height*/
+margin: -4rem 0 0; /* negative fixed header height */
+}
+
+/* ==== GENERAL ==== */
+
+html {
+	background-image: url('images/background.svg'); /* Some background texture */
+	background-size: 100px 100px;
+	background-repeat: repeat;
+	background-position: center top;
+	background-color: var(--tc-background);
+}
+
+html,input,select,button {
+	/* Set body font family and some finicky elements */
+	font-family: var(--tc-font-mono);
+	letter-spacing: 0.01em;
+	font-weight: normal;
+}
+
+body {
+	/* Center body in page */
+	margin: 0 auto;
+	max-width: 36rem;
+	padding: 2rem;
+	overflow-x: hidden;
+	word-break: break-word;
+	overflow-wrap: break-word;
+
+	/* Main body text */
+	color: var(--tc-text-secondary);
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+::selection {
+	/* Set background color for selected text */
+	background: var(--tc-text);
+	color: var(--tc-background);
+}
+
+/* ==== TYPOGRAPHY ==== */
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: var(--tc-font-sans);
+	font-weight: 600;
+	letter-spacing: -0.01em;
+	line-height: 1.25;
+	padding-top: .875rem;
+	color: var(--tc-text);
+}
+
+h1,
+h2,
+h3 {
+	padding-bottom: 2px;
+	margin-bottom: 8px;
+}
+
+h4,
+h5,
+h6 {
+	margin-bottom: .3rem;
+}
+
+h1 {
+	margin-top: 0;
+	font-size: 3.052rem;
+}
+
+h2 {
+	font-size: 2.441rem;
+}
+
+h3 {
+	font-size: 1.953rem;
+}
+
+h4 {
+	font-size: 1.563rem;
+}
+
+h5 {
+	font-size: 1.25rem;
+}
+
+small {
+	font-size: 0.8rem;
+}
+
+strong {
+	color: var(--tc-text);	
+}
+
+h6 {
+	font-size: .875rem;
+}
+
+p {
+	color: var(--tc-text-secondary);
+}
+
+strong {
+	var(--tc-text-bold);
+}
+
+a {
+	color: var(--tc-text);
+}
+
+a:hover {
+
+}
+
+/* ==== ABBREIVIATIONS ==== */
+
+abbr {
+	cursor: help;
+}
+
+abbr:hover {
+	/* Set the '?' cursor while hovering an abbreviation */
+	cursor: help;
+}
+
+/* ==== BLOCK QUOTES ==== */
+
+details blockquote {
+	/* Outdent blockquotes nested in a details summary to have icons and text to be inline with each other */
+	padding-left: 2em;
+	padding-bottom: 1em;
+}
+
+blockquote {
+	padding: 1.5rem 1.5rem 1.5rem 3rem;
+	background: var(--tc-background-secondary);
+}
+
+blockquote p {
+	color: var(--tc-text);
+}
+
+blockquote cite {
+	font-style: normal;
+	color: var(--tc-secondary);
+}
+
+blockquote *:first-child {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+blockquote *:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+blockquote::before {
+	/* Custom quote icon */
+	position: absolute;
+	content: ' ';
+	background-image: url('icons/quote-left.svg'); 
+	background-size: 1rem 1rem;
+	height: 1rem;
+	width: 1rem;
+	margin: 0.25rem 0 0.25rem -2rem;
+}
+
+article {
+	padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+	margin-bottom: 2rem;
+	background: var(--tc-background-secondary);
+}
+
+article *:first-child {
+	padding-top: 0;
+	margin-top: 0;
+}
+
+article *:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+article button {
+	padding: 0.5rem 1rem !important;
+}
+
+article aside {
+	max-width: calc(100% + 3rem);
+	margin: -1.25rem -1.5rem 0 -1.5rem !important;
+}
+
+/* ==== HEADER ==== */
+
+
+header {
+	
+	background: var(--tc-background-alpha);
+	
+	-webkit-backdrop-filter: blur(1rem);
+	backdrop-filter: blur(1rem);
+	
+	padding: 1rem 0 0.75rem 0;
+	
+	/* This sets the right and left margins to cancel out the body's margins. It's width is still the same, but the background stretches across the page's width. */
+
+	margin: -2rem calc(0px - (50vw - 50%)) 2rem;
+
+	/* Shorthand for:
+
+	margin-top: -2rem;
+	margin-bottom: 2rem;
+
+	margin-left: calc(0px - (50vw - 50%));
+	margin-right: calc(0px - (50vw - 50%)); */
+	
+	padding-left: calc(50vw - 50%);
+	padding-right: calc(50vw - 50%);
+	
+	/* Keep the header at the top */
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	z-index: 99;
+}
+
+header h1 {
+	margin: 0 0 0.25rem 1.5rem;
+}
+
+header h1:before {
+	/* Logo header icon */
+	position: absolute;
+	content: ' ';
+	background-image: url('icons/coderre-design.svg'); 
+	background-size: 1rem 1rem;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 1rem;
+	width: 1rem;
+	margin: 0.25rem 0 0.25rem -1.5rem;
+}
+
+header h1,
+header h2,
+header h3 {
+	padding-bottom: 0;
+	border-bottom: 0;
+	font-size: 1rem;
+}
+
+header > *:first-child {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+header > *:last-child {
+	margin-bottom: 0;
+}
+
+/* ==== NAVIGATION ==== */
+
+nav {
+	margin: 0;
+}
+
+nav ul{
+	margin: 0;
+	padding: 0;
+}
+
+/* ==== LINKS & BUTTONS ==== */
+
+a button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	font-size: 0.875rem;
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
+	background: transparent;
+	color: var(--tc-button);
+	border: 1px solid var(--tc-button);
+	border-radius: 4rem;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+.button:focus,
+.button:hover,
+button:focus,
+button:hover,
+input[type="submit"]:focus,
+input[type="submit"]:hover,
+input[type="reset"]:focus,
+input[type="reset"]:hover,
+input[type="button"]:focus,
+input[type="button"]:hover {
+	opacity: 0.5;
+}
+
+
+a button[disabled],
+button[disabled],
+input[type="submit"][disabled],
+input[type="reset"][disabled],
+input[type="button"][disabled] {
+	cursor: default;
+	border: 1px dashed var(--tc-text-secondary);
+	color: var(--tc-text-secondary);
+	
+	/* Set the [X] cursor while hovering a disabled link */
+	cursor: not-allowed;
+	opacity: 1;
+}
+
+
+
+
+
+.link {
+	cursor: pointer;
+	font-size: inherit;
+	position: relative;
+	white-space: nowrap;
+	color: var(--tc-text);
+}
+
+.link::before,
+.link::after {
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background: currentColor;
+	top: 100%;
+	left: 0;
+	pointer-events: none;
+}
+
+.link::before {
+	content: '';
+	/* show by default */
+}
+
+.link--nav {
+	color: var(--tc-text);
+	margin: 0 1rem 0 0;
+	padding: 0;
+	font-size: 0.875rem;
+	text-decoration: none;
+}
+
+.link--nav:hover {
+	opacity: 1;
+}
+
+.link--nav::before {
+	transform-origin: 100% 50%;
+	transform: scale3d(0, 1, 1);
+	transition: transform 0.3s;
+}
+
+.link--nav:hover::before {
+	transform-origin: 0% 50%;
+	transform: scale3d(1, 1, 1);
+}
+
+
+
+
+.link--inline {
+	color: var(--tc-text);
+	font-size: inherit;
+	text-decoration: none;
+	border-bottom: 1px dotted var(--tc-text);
+}
+
+.link--inline:hover {
+	opacity: 1;
+}
+
+.link--inline::before {
+	transform-origin: 100% 50%;
+	transform: scale3d(0, 1, 1);
+	transition: transform 0.3s;
+}
+
+.link--inline:hover::before {
+	transform-origin: 0% 50%;
+	transform: scale3d(1, 1, 1);
+}
+
+
+
+
+
+
+
+/* ==== FORMATTED TEXT ==== */
+
+code,
+pre,
+kbd,
+samp {
+	/* Set the font family for monospaced elements */
+	font-family: var(--tc-font-mono);
+}
+
+code,
+samp,
+kbd,
+pre {
+	/* The main preformatted style. This is changed slightly across different cases. */
+	background: var(--tc-background-secondary);
+	border-radius: 0.5rem;
+	padding: 1rem;
+	font-size: 1rem;
+}
+
+kbd {
+	/* Makes the kbd element look like a keyboard key */
+	border-bottom: 3px solid var(--tc-background-secondary);
+}
+
+pre {
+	padding: 1rem;
+	max-width: 100%;
+	overflow: auto;
+}
+
+pre code {
+	/* When <code> is in a <pre>, reset it's formatting to blend in */
+	background: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+code pre {
+	/* When <pre> is in a <code>, reset it's formatting to blend in */
+	display: inline;
+	background: inherit;
+	font-size: inherit;
+	color: inherit;
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+/* ==== SUMMARY & DETAILS ==== */
+
+
+details > summary::before {
+	/* Custom open icon */
+	position: absolute;
+	content: ' ';
+	background-image: url('icons/right.svg'); 
+	background-size: 1rem 1rem;
+	height: 1rem;
+	width: 1rem;
+	margin: 0.25rem 0 0.25rem -2rem;
+}
+
+details[open] > summary::before {
+	/* Custom close icon */
+	position: absolute;
+	content: ' ';
+	background-image: url('icons/close.svg');
+	background-size: 1rem 1rem;
+	height: 1rem;
+	width: 1rem;
+	margin: 0.25rem 0 0.25rem -2rem;
+}
+
+details > summary {
+	list-style-type: none;
+	padding-left: 2rem;
+}
+
+details > summary::-webkit-details-marker {
+	display: none;
+}
+
+details {
+	/* Make the <details> look more "clickable" */
+	padding: 1rem;
+	background: var(--tc-background-secondary);
+}
+
+summary {
+	/* Makes the <summary> look more like a "clickable" link with the pointer cursor */
+	cursor: pointer;
+	color: var(--tc-text);
+}
+
+summary:focus {
+	/* Remove the native browser stroke that gets added when clicked on */
+	outline: none;
+}
+
+details[open] {
+	/* Adjust the <details> padding while open */
+	padding-bottom: .75rem;
+}
+
+details[open] summary {
+	/* Adjust the <details> padding while open */
+	margin-bottom: 1rem;
+}
+
+details[open]>*:last-child {
+	/* Resets the bottom margin of the last element in the <details> while <details> is opened. This prevents double margins/paddings. */
+	margin-bottom: 0;
+}
+
+/* ==== TABLES & DEFENITIONS ==== */
+
+dt {
+	font-weight: bold;
+}
+
+dd::before {
+	/* Add an arrow to data table definitions */
+	content: '→ ';
+}
+
+hr {
+	/* Reset the border of the <hr> separator, then set a better line */
+	border: 0;
+	border-bottom: 1px solid var(--tc-background-secondary);
+	margin: 1rem auto;
+}
+
+fieldset {
+	margin-top: 1rem;
+	padding: 2rem;
+	border: 1px solid var(--tc-text);
+	border-radius: 0.5rem;
+}
+
+legend {
+	padding: auto 0.5rem;
+}
+
+table {
+	/* border-collapse sets the table's elements to share borders, rather than floating as separate "boxes". */
+	border-collapse: collapse;
+	width: 100%
+}
+
+td,
+th {
+	border: 1px solid var(--tc-text);
+	text-align: left;
+	padding: 0.5rem;
+}
+
+th {
+	background: var(--tc-background-secondary);
+}
+
+tr:nth-child(even) {
+	/* Set every other cell slightly darker. Improves readability. */
+	background: var(--tc-background-secondary);
+}
+
+table caption {
+	font-weight: bold;
+	margin-bottom: 0.5rem;
+}
+
+/* ==== LISTS ==== */
+
+ol,
+ul {
+	/* Replace the browser default padding */
+	padding-left: 2rem;
+}
+
+li {
+	margin-top: 0.25rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+	margin-bottom: 0;
+}
+
+ul.bulletless {
+	list-style-type: none;
+	margin: 0 0 0.875rem 0;
+	padding: 0;
+}
+
+ul.tags {
+	list-style-type: none;
+	margin: 0 0 0.875rem 0;
+	padding: 0;
+}
+
+.tags li {
+	display: inline-block;
+	color: var(--tc-text-secondary);
+	padding: 0;
+	margin: 0 1rem 0 0;
+	font-size: 1rem;
+	line-height: 1rem;
+}
+
+mark {
+	padding: 0.25rem;
+	background: var(--tc-background-secondary);
+	color: var(--tc-text);
+}
+
+/* ==== FORMS & INPUTS ==== */
+
+textarea {
+	/* Don't let the <textarea> extend off the screen naturally or when dragged by the user */
+	max-width: 100%;
+}
+
+textarea,
+select,
+input {
+	padding: 0.5rem 1rem;
+	margin: 0 0.5rem 0.5rem 0;
+	background: var(--tc-input);
+	color: var(--tc-text);
+
+	/* Set a transparent border. It isn't visible on idle, but prevents the cell from growing in size when a darker border is set on focus. */
+	border: 1px solid transparent;
+	border-radius: 0.5rem;
+	box-shadow: none;
+	box-sizing: border-box;
+	font-size: 1rem;
+}
+
+textarea:focus,
+select:focus,
+input[type]:focus {
+	border-color: var(--tc-text);
+
+	/* Reset any browser default outlines */
+	outline: 0;
+}
+
+/* ==== IMAGES ==== */
+
+img {
+	max-width: 100%;
+}
+
+.logo {
+	margin: 0 2rem 0 0;
+	filter: invert(100%);
+	max-width: 75%;
+}
+
+.icon {
+	width: 1rem;
+	height: 1rem;
+}
+
+/* ==== MARGINS & PADDING ==== */
+
+.m0 {
+	margin: 0;
+}
+
+.p0 {
+	padding: 0;
+}
+
+.flex--container {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 1rem;
+}
+
+.flex--left {
+	width: calc(50% - 0.5rem);
+	margin-right: 0.5rem;
+}
+
+.flex--right {
+	width: calc(50% - 0.5rem);
+	margin-left: 0.5rem;
+}
+
+.gap {
+	width: 100%;
+	height: 1rem;
+}
+
+.gap--md {
+	width: 100%;
+	height: 2rem;
+}
+
+.gap--lg {
+	width: 100%;
+	height: 4rem;
+}
+
+
+
+/* ==== FOOTER ==== */
+
+footer {
+	padding: 3rem 0 0 0;
+	font-size: 0.875rem;
+	color: var(--tc-text-secondary);
+}
+
+.top {
+	margin: 0 0 0 1.5rem;
+}
+
+.top:before {
+	/* Custom icon */
+	position: absolute;
+	content: ' ';
+	background-image: url('icons/triangle.svg'); 
+	background-size: 1rem 1rem;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 1rem;
+	width: 1rem;
+	margin: 0.25rem 0 0.25rem -1.5rem;
+}
+
+.copyright {
+	padding: 0;
+	margin: 0.75rem 0 0 0;
+	font-size: 12px;
+	line-height: 1rem;
+	color: var(--tc-text-secondary);
+	opacity: 0.5;
+}
