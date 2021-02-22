@@ -20,16 +20,17 @@
 <body>
     <header>
         <h1><a href="index.html" class="link link--nav">Tyler Coderre</a></h1>
-        <nav>
+        <nav class="desktop--nav">
             <ul>
-                <a href="index.html#about" class="link link--nav">About</a>
-                <a href="index.html#work" class="link link--nav">Work</a>
-                <a href="index.html#play" class="link link--nav">Play</a>
-                <a href="index.html#testimonials" class="link link--nav">Feedback</a>
-                <a href="index.html#contact" class="link link--nav">Talk</a>
+                <a href="#about" class="link link--nav">About</a>
+                <a href="#work" class="link link--nav">Work</a>
+                <a href="#play" class="link link--nav">Play</a>
+                <a href="#testimonials" class="link link--nav">Feedback</a>
+                <a href="#contact" class="link link--nav">Talk</a>
             </ul>
         </nav>
     </header>
+    
     <div id="top"></div>
     
     <section>
@@ -165,10 +166,37 @@
         <p><small>2010</small></p>
     </section>
     
+    <section id="contact">
+        <h2>Talk.</h2>
+        <h4>I'd love to chat about potential partnerships, chicken wings, or a dog pic exchange.</h4>
+        <p>You can contact and connect with me through <a href="mailto:tyler@coderre.design" class="link link--inline">email</a>, on <a href="https://dribbble.com/CoderreDesign" target="blank" class="link link--inline">Dribbble</a>, or <a href="https://www.linkedin.com/in/tylercoderre/" target="blank" class="link link--inline">LinkedIn</a> as well.</p>
+    </section>
+    
     <footer>
-        <a href="#top" class="link link--inline">Back to the top</a><br>
-        &#169; Tyler Coderre, all rights reserved
+        <p class="top"><a href="#top" class="link link--inline">Back to the top</a></p>
+        <p class="copyright">&#169; Tyler Coderre, all rights reserved</p>
     </footer>
+    
+    <div class="mobile--nav-bar">
+        <div class="mobile--nav-container">
+            <a href="index.html#about" class="mobile--nav-item">
+                <img class="icon m0" src="icons/about.svg">
+                <div class="mobile--nav-label">About</div>
+            </a>
+            <a href="index.html#work" class="mobile--nav-item">
+                <img class="icon m0" src="icons/design.svg">
+                <div class="mobile--nav-label">Work</div>
+            </a>
+            <a href="index.html#play" class="mobile--nav-item">
+                <img class="icon m0" src="icons/wink.svg">
+                <div class="mobile--nav-label">Play</div>
+            </a>
+            <a href="index.html#contact" class="mobile--nav-item">
+                <img class="icon m0" src="icons/talk.svg">
+                <div class="mobile--nav-label">Talk</div>
+            </a>
+        </div>
+    </div>   
     
 </body>
 </html>
