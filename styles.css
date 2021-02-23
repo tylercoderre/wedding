@@ -154,13 +154,13 @@ h1,h2,h3,h4,h5,h6 {
 	font-weight: 700;
 	letter-spacing: -0.01em;
 	line-height: 1.25;
-	padding-top: .875rem;
 	color: var(--tc-text);
 }
 
 h1,
 h2,
 h3 {
+	padding-top: .875rem;
 	padding-bottom: 0.1rem;
 	margin-bottom: var(--tc-space-xs);
 }
@@ -168,6 +168,7 @@ h3 {
 h4,
 h5,
 h6 {
+	padding-top: .5rem;
 	margin-bottom: .3rem;
 }
 
@@ -194,6 +195,10 @@ h5 {
 
 small {
 	font-size: 0.875rem;
+}
+
+h3 small {
+	font-size: 1.563rem;
 }
 
 strong {
@@ -929,6 +934,24 @@ img {
 	);
 }
 
+.experience--content {
+	width: calc(100% - 4rem);
+}
+
+.experience--right-accent {
+	width: 1rem;
+	float: right;
+	text-align: center;
+	padding: 1rem 0.5rem;
+	background: repeating-linear-gradient(
+		45deg,
+		transparent,
+		transparent 0.25rem,
+		var(--tc-background-secondary) 0.25rem,
+		var(--tc-background-secondary) calc(0.25rem + 4px)
+	);
+}
+
 .logo {
 	margin: 0 var(--tc-space-md) 0 0;
 	filter: invert(100%);
@@ -1132,4 +1155,6 @@ footer {
 	
 	small, .text_small {font-size: 0.833rem;}
 	
+	h3 small {font-size: 1.44rem;}
+		
 }
