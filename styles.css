@@ -939,10 +939,10 @@ img {
 }
 
 .experience--right-accent {
-	width: 1rem;
+	width: 2rem;
 	float: right;
 	text-align: center;
-	padding: 1rem 0.5rem;
+	padding: 2rem 0.5rem 4rem 0.5rem;
 	background: repeating-linear-gradient(
 		45deg,
 		transparent,
