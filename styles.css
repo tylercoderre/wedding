@@ -843,6 +843,25 @@ input[type]:focus {
 	outline: 0;
 }
 
+/* ==== CASE STUDIES ==== */
+
+.case-study--intro {
+	
+}
+
+.case-study--intro h2 {
+	font-size: 1.953rem;
+}
+
+.case-study--intro h3 {
+	font-size: 1.563rem;
+}
+
+.case-study--intro h4 {
+	font-size: 1.25rem;
+}
+
+
 /* ==== IMAGES ==== */
 
 img {
