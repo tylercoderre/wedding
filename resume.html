@@ -1,12 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Tyler Coderre / Resume</title>
-    
     <meta name="description" content="The online profile of Tyler Coderre">
     <meta name="keywords" content="Tyler, Coderre, Design, Developer, UX, UI, UX Designer, UI Designer, Product Designer">
     <meta property="og:title" content="Tyler Coderre">
@@ -14,28 +12,27 @@
     <meta property="og:description" content="The online profile of Tyler Coderre">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/og-image.jpg">
-    
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    
-    <link rel="stylesheet" href="styles.min.css">
-
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#111111">
+    <meta name="theme-color" content="#ffffff">
 </head>
     
 <body>
     
     <header>
         <h1><a href="index.html" class="link link--nav">Tyler Coderre</a></h1>
+        <input type="checkbox" id="switch"/><label for="switch">Toggle</label>
         <nav class="desktop--nav">
-            <ul>
-                <a href="../index.html#about" class="link link--nav">About</a>
-                <a href="../index.html#work" class="link link--nav">Work</a>
-                <a href="../index.html#play" class="link link--nav">Play</a>
-                <a href="../index.html#feedback" class="link link--nav">Feedback</a>
-                <a href="../index.html#contact" class="link link--nav">Talk</a>
-            </ul>
+            <a href="../index.html#about" class="link link--nav">About</a>
+            <a href="../index.html#work" class="link link--nav">Work</a>
+            <a href="../index.html#play" class="link link--nav">Play</a>
+            <a href="../index.html#feedback" class="link link--nav">Feedback</a>
+            <a href="../index.html#contact" class="link link--nav">Talk</a>
         </nav>
     </header>
     
@@ -189,7 +186,7 @@
     
     <footer>
         <div class="footer--right-accent"></div>
-        <p class="top"><a href="#top" class="link link--inline">Back to the top</a></p>
+        <p class="top icon-accent"><a href="#top" class="link link--inline">Back to the top</a></p>
         <p class="copyright">&#169; Tyler Coderre, all rights reserved</p>
     </footer>
     
@@ -215,6 +212,7 @@
     </div>
     
     <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+    <script src="script.js"></script>
     
 </body>
 </html>

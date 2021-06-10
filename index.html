@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
     
 <head>
     <meta charset="UTF-8">
@@ -12,25 +12,27 @@
     <meta property="og:description" content="The online profile of Tyler Coderre">
     <meta property="og:type" content="website">
     <meta property="og:image" content="images/og-image.jpg">
-    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#111111">
+    <meta name="theme-color" content="#ffffff">
 </head>
     
 <body>
     
     <header>
         <h1><a href="index.html" class="link link--nav">Tyler Coderre</a></h1>
+        <input type="checkbox" id="switch"/><label for="switch">Toggle</label>
         <nav class="desktop--nav">
-            <ul>
-                <a href="index.html#about" class="link link--nav">About</a>
-                <a href="index.html#work" class="link link--nav">Work</a>
-                <a href="index.html#play" class="link link--nav">Play</a>
-                <a href="index.html#feedback" class="link link--nav">Feedback</a>
-                <a href="index.html#contact" class="link link--nav">Talk</a>
-            </ul>
+            <a href="index.html#about" class="link link--nav">About</a>
+            <a href="index.html#work" class="link link--nav">Work</a>
+            <a href="index.html#play" class="link link--nav">Play</a>
+            <a href="index.html#feedback" class="link link--nav">Feedback</a>
+            <a href="index.html#contact" class="link link--nav">Talk</a>
         </nav>
     </header>
     
@@ -42,13 +44,15 @@
             <img class="avatar" src="images/avatar.png" alt="Tyler Coderre Avatar">
             <div class="hello--right-accent"></div>
         </div>
-
-    <h1>Hello.</h1>
-    <h2>I'm Tyler, I craft identities &&nbsp;experiences.</h2>
-    <p>I am a designer specializing in product design (UI+UX) and branding based in Buffalo, NY. I build out of <a href="https://coderre.design" target="blank" class="link link--inline">Coderre.Design</a> and work with <a href="https://itx.com" target="blank" class="link link--inline">ITX</a> solving problems for people and organizations of many shapes and sizes. While in my spare time, working towards keeping the robot uprising in check.</p>
-    <p>Through the years I have had the opportunity to work with some great <a href="#feedback" class="link link--inline">people</a> and <a href="#clients" class="link link--inline">organizations</a> by delivering award winning designs that produce results.</p>
-    <p class="document"><a href="resume.html" class="link link--inline">Resume and experience</a>.</p>
+        
+        <h1>Hello.</h1>
+        <h2>I'm Tyler, I craft identities &&nbsp;experiences.</h2>
+        <p>I am a designer specializing in product design (UI+UX) and branding based in Buffalo, NY. I build out of <a href="https://coderre.design" target="blank" class="link link--inline">Coderre.Design</a> and work with <a href="https://itx.com" target="blank" class="link link--inline">ITX</a> solving problems for people and organizations of many shapes and sizes. While in my spare time, working towards keeping the robot uprising in check.</p>
+        <p>Through the years I have had the opportunity to work with some great <a href="#feedback" class="link link--inline">people</a> and <a href="#clients" class="link link--inline">organizations</a> by delivering award winning designs that produce results.</p>
+        <p class="document icon-accent"><a href="resume.html" class="link link--inline">Resume and experience</a>.</p>
     </section>
+    
+    
     
     <img class="icon m0" src="icons/down.svg" alt="Down">
     
@@ -85,15 +89,15 @@
         <article>
             <aside><img src="images/person-centered-services-logo-and-website-device-gradient.jpg" alt="Person Centered Services Branding and Website Case Study">
             </aside>
-
-                <h3 class="m0">Person Centered Services</h3>
-                <ul class="tags">
-                    <li>Branding</li>
-                    <li>Design</li>
-                    <li>UI + UX</li>
-                    <li>Development</li>
-                </ul>
-                <a href="https://coderre.design/Coderre%20Design/case-study/person-centered-services" target="blank"><button class="button--wipe">Case Study</button></a>
+            
+            <h3 class="m0">Person Centered Services</h3>
+            <ul class="tags">
+                <li>Branding</li>
+                <li>Design</li>
+                <li>UI + UX</li>
+                <li>Development</li>
+            </ul>
+            <a href="https://coderre.design/Coderre%20Design/case-study/person-centered-services" target="blank"><button class="button--wipe">Case Study</button></a>
         </article>
         <article>
             <aside><img src="images/kore-marketing-agency-logo-and-website-device-gradient.jpg" alt="Kore Marketing Agency Branding and Website Case Study"></aside>
@@ -116,11 +120,11 @@
             </ul>
             <a href="https://coderre.design/Coderre%20Design/case-study/mike-cardus" target="blank"><button class="button--wipe">Case Study</button></a>
         </article>
-
+        
         <p class="m0">More case studies are available,</p>
         
-        <p class="at"><a href="https://coderre.design/work/" class="link link--inline">Coderre.Design</a>.</p>
-
+        <p class="at icon-accent"><a href="https://coderre.design/work/" class="link link--inline">Coderre.Design</a>.</p>
+        
     </section>
     
     <section id="play">
@@ -248,7 +252,7 @@
                 </div>
             </div>
         </div>
-            
+        
         <div class="flex--container">
             <div class="flex--left">
                 <div class="flex--container">
@@ -282,8 +286,8 @@
     
     <footer>
         <div class="footer--right-accent"></div>
-            <p class="top"><a href="#top" class="link link--inline">Back to the top</a></p>
-            <p class="copyright">&#169; Tyler Coderre, all rights reserved</p>
+        <p class="top icon-accent"><a href="#top" class="link link--inline">Back to the top</a></p>
+        <p class="copyright">&#169; Tyler Coderre, all rights reserved</p>
     </footer>
     
     <div class="mobile--nav-bar">
@@ -300,14 +304,15 @@
                 <img class="icon m0" src="icons/wink.svg" alt="Play">
                 <div class="mobile--nav-label">Play</div>
             </a>
-                <a href="index.html#contact" class="mobile--nav-item" alt="Talk">
+            <a href="index.html#contact" class="mobile--nav-item" alt="Talk">
                 <img class="icon m0" src="icons/talk.svg">
                 <div class="mobile--nav-label">Talk</div>
             </a>
         </div>
     </div>
     
-    <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+    <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>    
+    <script src="script.js"></script>
     
 </body>
 </html>

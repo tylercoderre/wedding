@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#ffffff"><path d="M 7 1 L 7 12.191406 L 3.722656 9.015625 L 3.027344 9.734375 L 7.5 14.074219 L 11.972656 9.734375 L 11.277344 9.015625 L 8 12.191406 L 8 1 Z" fill="#ffffff"/></svg>
+<!-- Generator: Adobe Illustrator 25.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#111111;}
+</style>
+<path class="st0" d="M7,1v11.2L3.7,9L3,9.7l4.5,4.3L12,9.7L11.3,9L8,12.2V1H7z"/>
+</svg>
