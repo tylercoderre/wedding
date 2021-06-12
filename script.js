@@ -1,3 +1,4 @@
+// LIGHT/DARK MODE TOGGLE
 let theme = localStorage.getItem('data-theme');
 const checkbox = document.getElementById("switch");
 const changeThemeToDark = () =>{
@@ -25,7 +26,6 @@ checkbox.addEventListener('change', ()=> {
     }
    
 });
-
 
 
 
