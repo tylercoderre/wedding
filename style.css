@@ -435,6 +435,7 @@ header > *:last-child {
 
 .header-flex-container {
   display: flex;
+  height: 1rem;
 }
 
 .header-flex-child {
@@ -442,7 +443,7 @@ header > *:last-child {
 }  
 
 .header-flex-child:first-child {
-  margin-right: 20px;
+  margin-right: 1.5rem;
 } 
 
 
@@ -1403,6 +1404,7 @@ footer {
 
 .desktop--nav {
   display: block;
+  margin-top: 0.5rem;
 }
 
 
