@@ -27,8 +27,9 @@
 
 html[data-theme='light']{  
   --tc-background-primary: hsl(0, 0%, 96%);
-  --tc-background-alpha: hsla(0, 0%, 96%, 0.9);
+  --tc-background-alpha: hsla(0, 0%, 96%, 0.94);
   --tc-background-secondary: hsl(0, 0%, 93%);
+  --tc-background-tertiary: hsl(0, 0%, 90%);
   --tc-text: hsl(0, 0%, 2%);
   --tc-text-secondary: hsl(0, 0%, 36%);
   --tc-text-copyright: hsl(0, 0%, 52%);
@@ -37,8 +38,9 @@ html[data-theme='light']{
 
 html[data-theme='dark'] {
   --tc-background-primary: hsl(0, 0%, 12%);
-  --tc-background-alpha: hsla(0, 0%, 12%, 0.9);
+  --tc-background-alpha: hsla(0, 0%, 12%, 0.96);
   --tc-background-secondary: hsl(0, 0%, 16%);
+  --tc-background-tertiary: hsl(0, 0%, 20%);
   --tc-text: hsl(0, 0%, 98%);
   --tc-text-secondary: hsl(0, 0%, 64%);
   --tc-text-copyright: hsl(0, 0%, 48%);
@@ -147,25 +149,11 @@ html {
 /* ==== GENERAL ==== */
 
 html {
-  background-image: url('images/background-light-mode.svg');
-  /* Some background texture */
-  background-size: 100px 100px;
-  background-repeat: repeat;
-  background-position: center top;
   background-color: var(--tc-background-primary);
   -webkit-transition: background-color 0.25s ease;
   transition: background-color 0.25s ease;
   font-variation-settings: normal;
 }
-
-html[data-theme='light'] {
-  background-image: url('images/background-light-mode.svg');
-}
-
-html[data-theme='dark'] {
-  background-image: url('images/background-dark-mode.svg');
-}
-
 
 html,input,select,button {
   /* Set body font family and some finicky elements */
@@ -960,16 +948,15 @@ textarea {
 textarea,
 select,
 input {
-  padding: var(--tc-space-xs) var(--tc-space-sm);
+  padding: var(--tc-space-sm);
   margin: var(--tc-space-xs) 0 var(--tc-space-sm) 0;
-  background: transparent;
+  background: var(--tc-background-secondary);
+  border: var(--tc-border-standard) transparent;
   color: var(--tc-text);
-  border: var(--tc-border-none);
   border-radius: 0;
   box-shadow: none;
   box-sizing: border-box;
   font-size: 1rem;
-  border: 1px dotted var(--tc-text-secondary);
   width: 100%;
 }
 
@@ -1025,11 +1012,11 @@ label#switch {
   text-indent: -9999px;
   width: 2.5rem;
   height: 1.25rem;
-  background: transparent;
+  background: var(--tc-background-tertiary);
   float: right;
   border-radius: 1rem;
   position: relative;
-  border: 1px dotted var(--tc-text-secondary);
+  border: none;
   margin: 0.125rem 0 0 0;
 }
 
@@ -1064,7 +1051,7 @@ html[data-theme='dark'] label#switch:after {
 }
 
 input#switch:checked + label#switch {
-  background: transparent;
+  background: var(--tc-background-tertiary);
 }
 
 input#switch:checked + label#switch:after {
