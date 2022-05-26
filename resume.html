@@ -24,25 +24,42 @@
     
 <body>
     
+    <a id='skip' class='screen-reader-text' href='#maincontent'>
+        Skip to Content
+    </a>
+    
     <header>
         <div class="header-flex-container">
             <div class="header-flex-child">
-                <h1><a href="index.html" class="link link--nav">Tyler Coderre</a></h1>
+                <h1><a href="index.html" class="link link--nav" aria-label="logo" tabindex="0" role="logo">Tyler Coderre</a></h1>
             </div>
             <div class="header-flex-child">
                 <input type="checkbox" id="switch"/><label id="switch" for="switch">Toggle</label>
             </div>
-        </div>        
+        </div>
         <nav class="desktop--nav">
-            <a href="../index.html#about" class="link link--nav">About</a>
-            <a href="../index.html#work" class="link link--nav">Work</a>
-            <a href="../index.html#play" class="link link--nav">Play</a>
-            <a href="../index.html#feedback" class="link link--nav">Feedback</a>
-            <a href="../index.html#contact" class="link link--nav">Talk</a>
+            <ul id="menubar" role="menubar" aria-label="Navigation Menu">
+                <li role="none">
+                    <a href="../index.html#about" class="link link--nav">About</a>
+                </li>
+                <li role="none">
+                    <a href="../index.html#work" class="link link--nav">Work</a>
+                </li>
+                <li role="none">
+                    <a href="../index.html#play" class="link link--nav">Play</a>
+                </li>
+                <li role="none">
+                    <a href="../index.html#feedback" class="link link--nav">Feedback</a>
+                </li>
+                <li role="none">
+                    <a href="../index.html#contact" class="link link--nav">Talk</a>
+                </li>
+            </ul>
         </nav>
     </header>
     
     <div id="top"></div>
+    <div id="maincontent"></div>
     
     <section>
         <div class="experience--right-accent">
@@ -70,7 +87,7 @@
     
         <div class="gap--lg"></div>
         
-        <h3>Interaction Designer (UX)</h3>
+        <h3>Senior UX Designer</h3>
         <h4><small>ITX Corp.</small></h4>
         <p><small>Nov 2018 – Present</small></p>
         <p>I lead the user experience and user interface design for award-winning enterprise and SaaS software for a Fortune 500 company and internal company projects.</p>
@@ -189,13 +206,17 @@
         <h3><small>I'd love to chat about potential partnerships, chicken wings, or a dog pic exchange.</small></h3>
         <p>You can contact and connect with me through <a href="mailto:tyler@coderre.design" class="link link--inline">email</a>, on <a href="https://dribbble.com/CoderreDesign" target="blank" class="link link--inline">Dribbble</a>, or <a href="https://www.linkedin.com/in/tylercoderre/" target="blank" class="link link--inline">LinkedIn</a> as well.</p>
         <div class="gap"></div>
-        <form action="https://app.99inbound.com/api/e/1YlM0MFJ" method="POST" target="_blank">
-            <label class="required-field">Name</label>
-            <input type="text" name="name" placeholder="Hello" required>
-            <label class="required-field">Email</label>
-            <input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="How should I reach you?" required>
-            <label class="required-field">Message</label>
-            <textarea name="message" placeholder="How can I help?" cols="30" rows="10"></textarea>
+        <form method="post" action="https://forms.un-static.com/forms/fa71854ede5e1b4202b460f25a65d461710e7a57">
+            <label for="name" class="required-field">Name</label>
+            <input type="text" name="name" autocomplete="name" required aria-required="true" placeholder="Hello" required>
+            <div class="gap"></div>
+            <label for="email" class="required-field">Email</label>
+            <input type="email" name="email" autocomplete="email" required aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="How should I reach you?" required>
+            <div class="gap"></div>
+            <label for="message" class="required-field">Message</label>
+            <textarea name="message" required aria-required="true" placeholder="How can I help?" cols="30" rows="10" required></textarea>
+            <div class="g-recaptcha" data-sitekey="6Ld76BYgAAAAAGzY0GwFTUrlxtMbfHZGJruCxjIt"></div>
+            <div class="gap"></div>
             <button class="button--wipe">Send</button>
         </form>
     </section>
