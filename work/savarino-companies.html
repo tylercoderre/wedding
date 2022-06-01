@@ -31,10 +31,10 @@
     <header>
         <div class="header-flex-container">
             <div class="header-flex-child">
-                <a href="../index.html" aria-label="logo" tabindex="-1" role="logo"><button class="tc-logo"><img class="icon" style="margin: 0 0.5rem -0.25rem 0;" src="../icons/coderre-design.svg" alt="Down">Tyler Coderre</button></a>
+                <a href="../index.html" aria-label="logo" tabindex="-1" role="banner"><button class="tc-logo"><img class="icon" style="margin: 0 0.5rem -0.25rem 0;" src="../icons/coderre-design.svg" alt="Down">Tyler Coderre</button></a>
             </div>
             <div class="header-flex-child">
-                <input type="checkbox" id="switch"/><label id="switch" for="switch">Toggle</label>
+                <input type="checkbox" aria-labelledby="theme-switch" id="switch"/><label id="switch" for="switch">Toggle</label>
             </div>
         </div>
         <nav class="desktop--nav">
@@ -325,7 +325,7 @@
     
     <footer>
         <div class="footer--right-accent"></div>
-        <p class="top icon-accent"><a href="#top" tabindex="1" class="link link--inline">Back to the top</a></p>
+        <p class="top icon-accent"><a href="#top" tabindex="0" class="link link--inline">Back to the top</a></p>
         <p class="copyright">&#169; Tyler Coderre, all rights reserved</p>
     </footer>
     
@@ -352,6 +352,7 @@
     
     <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
     <script src="../script.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
 </body>
 </html>

@@ -32,7 +32,7 @@ html[data-theme='light']{
   --tc-background-tertiary: hsl(0, 0%, 90%);
   --tc-text: hsl(0, 0%, 2%);
   --tc-text-secondary: hsl(0, 0%, 36%);
-  --tc-text-copyright: hsl(0, 0%, 52%);
+  --tc-text-copyright: hsl(0, 0%, 44%);
   --tc-shadow: hsl(0, 0%, 72%);
 }
 
@@ -43,7 +43,7 @@ html[data-theme='dark'] {
   --tc-background-tertiary: hsl(0, 0%, 20%);
   --tc-text: hsl(0, 0%, 98%);
   --tc-text-secondary: hsl(0, 0%, 64%);
-  --tc-text-copyright: hsl(0, 0%, 48%);
+  --tc-text-copyright: hsl(0, 0%, 53%);
   --tc-shadow: hsl(0, 0%, 8%);
 }
 
@@ -1694,7 +1694,7 @@ html[data-theme='dark'] .link--case-study-image:hover {
     aspect-ratio: 8 / 16;
     overflow: scroll;
     border: 4px solid #111;
-    outline: 4px solid #666;
+    outline: none;
     border-radius: 1rem;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -1993,7 +1993,7 @@ footer {
   }
   
   .device--right {
-    width: calc(100% - var(--tc-space-sm));
+    width: calc(100% - calc(var(--tc-space-md) * 2));
     margin: var(--tc-space-md) var(--tc-space-md) 0 var(--tc-space-md);
   }
   
