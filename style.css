@@ -1418,6 +1418,7 @@ dialog[open] {
   padding: var(--tc-space-sm) var(--tc-space-sm) 0 var(--tc-space-sm);
   overflow: scroll;
   max-height: 80vh;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
 .case-study--label {
