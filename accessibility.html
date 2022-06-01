@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tyler Coderre / Accessibility</title>
+    <meta name="description" content="The online profile of Tyler Coderre">
+    <meta name="keywords" content="Tyler, Coderre, Design, Developer, UX, UI, UX Designer, UI Designer, Product Designer">
+    <meta property="og:title" content="Tyler Coderre">
+    <meta property="og:url" content="https://tylercoderre.com">
+    <meta property="og:description" content="The online profile of Tyler Coderre">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/og-image.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#888888">
+    <meta name="msapplication-TileColor" content="#111111">
+    <meta name="theme-color" content="#ffffff">
+</head>
+    
+<body>
+    
+    <a id='skip' class='screen-reader-text' href='#maincontent'>
+        Skip to Content
+    </a>
+    
+    <header>
+        <div class="header-flex-container">
+            <div class="header-flex-child">
+                <a href="./index.html" aria-label="logo" tabindex="-1" role="logo"><button class="tc-logo"><img class="icon" style="margin: 0 0.5rem -0.25rem 0;" src="icons/coderre-design.svg" alt="Down">Tyler Coderre</button></a>
+            </div>
+            <div class="header-flex-child">
+                <input type="checkbox" id="switch"/><label id="switch" for="switch">Toggle</label>
+            </div>
+        </div>
+        <nav class="desktop--nav">
+            <ul id="menubar" role="menubar" aria-label="Navigation Menu">
+                <li role="none">
+                    <a href="./index.html#about" class="link link--nav">About</a>
+                </li>
+                <li role="none">
+                    <a href="./index.html#work" class="link link--nav">Work</a>
+                </li>
+                <li role="none">
+                    <a href="./index.html#play" class="link link--nav">Play</a>
+                </li>
+                <li role="none">
+                    <a href="./index.html#feedback" class="link link--nav">Feedback</a>
+                </li>
+                <li role="none">
+                    <a href="./index.html#contact" class="link link--nav">Talk</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div id="top"></div>
+    <div id="maincontent"></div>
+    
+    <section>
+        <div class="experience--right-accent">
+            <img class="icon" src="icons/accessibility.svg" alt="Accessibility">
+        </div>
+        <div class="experience--content">
+            <h1>Accessibility.</h1>
+            <p>I am dedicated to making this site fully accessible, starting with AA and hitting AAA when possible so this site's content accessible and user friendly to everyone. This site is a <strong>work in progress</strong> and may not meet every WCAG item at a given moment. I am constantly learning and striving to keep up with both design and development accessibility considerations. If you are having difficulty viewing or navigating the content on this website, or notice any content, feature, or functionality that you believe is not fully accessible to people with disabilities, please <a href="#contact" class="link link--inline">reach out</a>.</p>
+            <p>I take your feedback seriously and will consider it as I evaluate ways to accommodate all customers and visitors. Additionally, while I do not control certain vendors, I strongly encourage vendors of third-party digital content to provide content that is accessible and user friendly.</p>
+        </div>
+    </section>    
+    
+    <section id="contact">
+        <h2>Talk.</h2>
+        <h3><small>I'd love to chat about potential partnerships, chicken wings, or a dog pic exchange.</small></h3>
+        <p>You can contact and connect with me through <a href="mailto:tyler@coderre.design" class="link link--inline">email</a>, on <a href="https://dribbble.com/CoderreDesign" target="blank" class="link link--inline">Dribbble</a>, or <a href="https://www.linkedin.com/in/tylercoderre/" target="blank" class="link link--inline">LinkedIn</a> as well.</p>
+        <div class="gap"></div>
+        <form method="post" action="https://forms.un-static.com/forms/fa71854ede5e1b4202b460f25a65d461710e7a57">
+            <label for="name" class="required-field">Name</label>
+            <input type="text" name="name" autocomplete="name" required aria-required="true" placeholder="Hello" required>
+            <div class="gap"></div>
+            <label for="email" class="required-field">Email</label>
+            <input type="email" name="email" autocomplete="email" required aria-required="true" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="How should I reach you?" required>
+            <div class="gap"></div>
+            <label for="message" class="required-field">Message</label>
+            <textarea name="message" required aria-required="true" placeholder="How can I help?" cols="30" rows="10" required></textarea>
+            <div class="g-recaptcha" data-sitekey="6Ld76BYgAAAAAGzY0GwFTUrlxtMbfHZGJruCxjIt"></div>
+            <div class="gap"></div>
+            <button class="button--wipe">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="footer--right-accent"></div>
+        <p class="top icon-accent"><a href="#top" tabindex="1" class="link link--inline">Back to the top</a></p>
+        <p class="copyright">&#169; Tyler Coderre, all rights reserved</p>
+    </footer>
+    
+    <div class="mobile--nav-bar">
+        <div class="mobile--nav-container">
+            <a href="../index.html#about" class="mobile--nav-item">
+                <img class="icon m0" src="icons/about.svg" alt="About">
+                <div class="mobile--nav-label">About</div>
+            </a>
+            <a href="../index.html#work" class="mobile--nav-item">
+                <img class="icon m0" src="icons/design.svg" alt="Work">
+                <div class="mobile--nav-label">Work</div>
+            </a>
+            <a href="../index.html#play" class="mobile--nav-item">
+                <img class="icon m0" src="icons/wink.svg" alt="Play">
+                <div class="mobile--nav-label">Play</div>
+            </a>
+            <a href="../index.html#contact" class="mobile--nav-item" alt="Talk">
+                <img class="icon m0" src="icons/talk.svg">
+                <div class="mobile--nav-label">Talk</div>
+            </a>
+        </div>
+    </div>
+    
+    <script data-host="https://microanalytics.io" data-dnt="false" src="https://microanalytics.io/js/script.js" id="ZwSg9rf6GA" async defer></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
