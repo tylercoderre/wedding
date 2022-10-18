@@ -271,6 +271,12 @@ h5 {
 
 small {
   font-size: 0.875rem;
+  line-height: 1;
+}
+
+h1 small {
+  font-size: 2.441rem;
+  line-height: 1;
 }
 
 h3 small {
@@ -851,6 +857,23 @@ article aside hr.locked::after {
   position: absolute;
   content: ' ';
   background-image: url('icons/resume.svg');
+  background-size: var(--tc-icon-size) var(--tc-icon-size);
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: var(--tc-icon-size);
+  width: var(--tc-icon-size);
+  margin: 0.25rem 0 0.25rem -1.5rem;
+}
+
+.status {
+  margin: 0 0 0 1.5rem;
+}
+
+.status::before {
+  /* Custom icon */
+  position: absolute;
+  content: ' ';
+  background-image: url('icons/checkmark.svg');
   background-size: var(--tc-icon-size) var(--tc-icon-size);
   background-position: center center;
   background-repeat: no-repeat;
@@ -1802,6 +1825,14 @@ html[data-theme='dark'] .link--case-study-image:hover {
   padding: 0;
 }
 
+.actions--container {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: var(--tc-space-sm);
+  margin-top: var(--tc-space-md);
+  align-items: center;
+}
+
 .flex--container {
   display: flex;
   flex-direction: row;
@@ -2068,7 +2099,24 @@ footer {
   
   small, .text_small {font-size: 0.833rem; line-height: 1rem;}
   
+  h1 small {
+    font-size: 2.074rem;
+    line-height: 1;
+  }
+  
   h3 small {font-size: 1.44rem;}
   
 }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   

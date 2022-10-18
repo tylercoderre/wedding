@@ -21,8 +21,10 @@ checkbox.addEventListener('change', ()=> {
     let theme = localStorage.getItem('data-theme');
     if (theme ==='dark'){
         changeThemeToLight()
+        location.reload(); // FIXES MOBILE ICONS NOT CHANGING
     }else{
         changeThemeToDark()
+        location.reload();  // FIXES MOBILE ICONS NOT CHANGING
     }
    
 });
@@ -54,9 +56,6 @@ openModal.addEventListener('clickmenu', () => {
 dialog.addEventListener('closemenu', () => {
     output.value = dialog.returnValue;
 });
-
-
-
 
 
 
