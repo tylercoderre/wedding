@@ -22,7 +22,8 @@ checkbox.addEventListener('change', ()=> {
     if (theme ==='dark'){
         changeThemeToLight()
         location.reload(); // FIXES MOBILE ICONS NOT CHANGING
-    }else{
+    }
+    else{
         changeThemeToDark()
         location.reload();  // FIXES MOBILE ICONS NOT CHANGING
     }
