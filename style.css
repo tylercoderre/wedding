@@ -63,14 +63,6 @@ html[data-theme='dark'] .icon-accent::before,  html[data-theme='dark'] .hello--l
   filter: invert(100%);
 }
 
-html[data-theme='light'] .hello {
-  filter: grayscale(0);
-}
-
-html[data-theme='dark'] .hello {
-  filter: grayscale(1);
-}
-
 * {
   /* Reset margins and padding */
   margin: 0;
@@ -1449,6 +1441,7 @@ input#switch[type=checkbox] {
   height: 0;
   width: 0;
   visibility: hidden;
+  margin: 0;
 }
 
 label#switch {
