@@ -1,33 +1,32 @@
 // LIGHT/DARK MODE TOGGLE
 let theme = localStorage.getItem('data-theme');
 const checkbox = document.getElementById("switch");
-const changeThemeToDark = () =>{
+const changeThemeToDark = () => {
     document.documentElement.setAttribute("data-theme", "dark")
     localStorage.setItem("data-theme", "dark")
     console.log("Who turned off the lights?")
 }
 
-const changeThemeToLight = () =>{
+const changeThemeToLight = () => {
     document.documentElement.setAttribute("data-theme", "light")
     localStorage.setItem("data-theme", 'light')
     console.log("Let there be light!")
 }
 
-if(theme === 'dark'){
+if (theme === 'dark') {
     changeThemeToDark()
 }
 
-checkbox.addEventListener('change', ()=> {
+checkbox.addEventListener('change', () => {
     let theme = localStorage.getItem('data-theme');
-    if (theme ==='dark'){
+    if (theme === 'dark') {
         changeThemeToLight()
         location.reload(); // FIXES MOBILE ICONS NOT CHANGING
-    }
-    else{
+    } else {
         changeThemeToDark()
-        location.reload();  // FIXES MOBILE ICONS NOT CHANGING
+        location.reload(); // FIXES MOBILE ICONS NOT CHANGING
     }
-   
+
 });
 
 // DIALOG
@@ -57,7 +56,3 @@ openModal.addEventListener('clickmenu', () => {
 dialog.addEventListener('closemenu', () => {
     output.value = dialog.returnValue;
 });
-
-
-
-
